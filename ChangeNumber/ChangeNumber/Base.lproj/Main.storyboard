@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ipF-8u-8nM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Best App Ever!-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Best App Ever!" id="BYZ-38-t0r" customClass="ViewController" customModule="ChangeNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Master View Controller">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-nI-viL">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="123"/>
+                                <connections>
+                                    <segue destination="teB-8R-BQw" kind="show" id="36L-Yi-j9Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6V2-nI-viL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerYWithinMargins" id="Yxy-9Y-vBp"/>
+                            <constraint firstItem="6V2-nI-viL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="sJ6-3l-K9W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Best App Ever!" id="dMo-4O-VAu"/>
+                    <connections>
+                        <outlet property="aButton" destination="6V2-nI-viL" id="zp3-6m-4es"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="-386"/>
+        </scene>
+        <!--detail ViewController-->
+        <scene sceneID="Y3s-7A-pTq">
+            <objects>
+                <viewController title="Change Number" id="teB-8R-BQw" userLabel="detail ViewController" customClass="ValueViewController" customModule="ChangeNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ATP-iU-oPj"/>
+                        <viewControllerLayoutGuide type="bottom" id="kBU-u8-LDy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WBP-sF-fpG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJF-4f-wYT">
+                                <rect key="frame" x="0.0" y="359" width="600" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="teB-8R-BQw" id="vd4-zO-cUv"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yJF-4f-wYT" firstAttribute="leading" secondItem="WBP-sF-fpG" secondAttribute="leadingMargin" constant="-20" id="CAt-pd-XN9"/>
+                            <constraint firstItem="kBU-u8-LDy" firstAttribute="top" secondItem="yJF-4f-wYT" secondAttribute="bottom" constant="25" id="NTa-nc-PoU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yJF-4f-wYT" secondAttribute="trailing" constant="-20" id="eqL-FX-j1n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myPickerView" destination="yJF-4f-wYT" id="PjU-7d-63Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGV-jE-LyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309" y="-386"/>
+        </scene>
+        <!--Nav ViewController-->
+        <scene sceneID="oWG-mK-UyF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ipF-8u-8nM" userLabel="Nav ViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N5j-cb-HGi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="USo-kz-jUb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2r-1z-vdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139" y="-386"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sliderdemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jAz-E6-H3Y" userLabel="Blauw Slider">
+                                <rect key="frame" x="18" y="550" width="564" height="31"/>
+                                <animations/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeBackgroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="pbM-la-4z0"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D5t-IJ-8qH" userLabel="Groen Slider">
+                                <rect key="frame" x="18" y="512" width="564" height="31"/>
+                                <animations/>
+                                <color key="maximumTrackTintColor" red="0.27877503069999998" green="1" blue="0.092910201989999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeBackgroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="zN1-Cf-3ag"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-3h-ygv" userLabel="Rood Slider">
+                                <rect key="frame" x="18" y="474" width="564" height="31"/>
+                                <animations/>
+                                <color key="maximumTrackTintColor" red="1" green="0.099743065450000001" blue="0.096895277769999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeBackgroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZCq-Bz-uyl"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jAz-E6-H3Y" secondAttribute="bottom" constant="20" id="EB4-GH-g0z"/>
+                            <constraint firstItem="jAz-E6-H3Y" firstAttribute="top" secondItem="D5t-IJ-8qH" secondAttribute="bottom" constant="8" id="KDc-SD-i1h"/>
+                            <constraint firstItem="D5t-IJ-8qH" firstAttribute="centerX" secondItem="jAz-E6-H3Y" secondAttribute="centerX" id="Vnp-Wv-Q8Y"/>
+                            <constraint firstItem="kaM-3h-ygv" firstAttribute="width" secondItem="D5t-IJ-8qH" secondAttribute="width" id="ZES-Rb-IAm"/>
+                            <constraint firstItem="jAz-E6-H3Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCO-pV-FTj"/>
+                            <constraint firstItem="kaM-3h-ygv" firstAttribute="centerX" secondItem="D5t-IJ-8qH" secondAttribute="centerX" id="kQr-Yq-Jsr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jAz-E6-H3Y" secondAttribute="leading" id="oet-th-yZE"/>
+                            <constraint firstItem="D5t-IJ-8qH" firstAttribute="width" secondItem="jAz-E6-H3Y" secondAttribute="width" id="rvv-Xz-vGL"/>
+                            <constraint firstItem="D5t-IJ-8qH" firstAttribute="top" secondItem="kaM-3h-ygv" secondAttribute="bottom" constant="8" id="xUa-VC-URu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jAz-E6-H3Y" secondAttribute="trailing" id="zxq-2p-Azy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bleuSlider" destination="jAz-E6-H3Y" id="7tM-jg-Uyo"/>
+                        <outlet property="greenSlider" destination="D5t-IJ-8qH" id="IMR-mL-hlz"/>
+                        <outlet property="redSlider" destination="kaM-3h-ygv" id="9JE-eu-1MS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="302"/>
+        </scene>
+    </scenes>
+</document>
